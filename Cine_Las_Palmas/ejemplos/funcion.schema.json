@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Funcion",
+  "type": "object",
+  "required": ["fechaHora", "precio", "pelicula", "sala"],
+  "properties": {
+    "fechaHora": {"type": "string", "format": "date-time"},
+    "precio": {"type": "number", "exclusiveMinimum": 0},
+    "pelicula": {
+      "type": "object",
+      "required": ["id", "titulo", "clasificacion", "duracion", "genero"],
+      "properties": {
+        "id": {"type": "integer", "minimum": 1},
+        "titulo": {"type": "string", "minLength": 1},
+        "clasificacion": {"type": "string", "enum": ["A", "B", "B15", "C"]},
+        "duracion": {"type": "integer", "minimum": 1},
+        "genero": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": false
+    },
+    "sala": {
+      "type": "object",
+      "required": ["id", "numero", "capacidad"],
+      "properties": {
+        "id": {"type": "integer", "minimum": 1},
+        "numero": {"type": "integer", "minimum": 1},
+        "capacidad": {"type": "integer", "minimum": 1}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

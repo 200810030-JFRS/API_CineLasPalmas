@@ -1,0 +1,16 @@
+{
+  "fechaHora": "2026-11-05T18:30:00-06:00",
+  "precio": 85.00,
+  "pelicula": {
+    "id": 1,
+    "titulo": "El viaje inesperado",
+    "clasificacion": "B",
+    "duracion": 110,
+    "genero": "Aventura"
+  },
+  "sala": {
+    "id": 2,
+    "numero": 2,
+    "capacidad": 100
+  }
+}

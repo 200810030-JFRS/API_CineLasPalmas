@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<boleto>
+    <folio>BOL-8F2A91C4</folio>
+    <fila>C</fila>
+    <numero>12</numero>
+    <funcion ref="1"/>
+    <cliente ref="3"/>
+</boleto>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="boleto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="folio" type="xs:string"/>
+        <xs:element name="fila"><xs:simpleType><xs:restriction base="xs:string"><xs:pattern value="[A-Z]{1,2}"/></xs:restriction></xs:simpleType></xs:element>
+        <xs:element name="numero"><xs:simpleType><xs:restriction base="xs:positiveInteger"/></xs:simpleType></xs:element>
+        <xs:element name="funcion"><xs:complexType><xs:attribute name="ref" type="xs:positiveInteger" use="required"/></xs:complexType></xs:element>
+        <xs:element name="cliente"><xs:complexType><xs:attribute name="ref" type="xs:positiveInteger" use="required"/></xs:complexType></xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

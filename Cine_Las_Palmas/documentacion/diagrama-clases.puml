@@ -1,0 +1,42 @@
+@startuml
+class Pelicula {
+  - id: Long
+  - titulo: String
+  - clasificacion: Clasificacion
+  - duracion: Integer
+  - genero: String
+}
+class Sala {
+  - id: Long
+  - numero: Integer
+  - capacidad: Integer
+}
+class Funcion {
+  - id: Long
+  - fechaHora: LocalDateTime
+  - precio: Decimal
+}
+class Boleto {
+  - id: Long
+  - folio: String
+  - fila: String
+  - numero: Integer
+}
+class Cliente {
+  - id: Long
+  - nombre: String
+  - email: String
+  - registrado: Boolean
+  - puntos: Integer
+}
+enum Clasificacion {
+  A
+  B
+  B15
+  C
+}
+Pelicula "1" -- "0..*" Funcion : se proyecta en
+Sala "1" -- "0..*" Funcion : alberga
+Funcion "1" -- "0..*" Boleto : genera
+Cliente "0..1" -- "0..*" Boleto : compra
+@enduml
